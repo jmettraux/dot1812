@@ -3,21 +3,23 @@
 
 strict graph {
 
+  rankdir="LR";
+
   prussia_n [label="North Prussia"];
   prussia_s [label="South Prussia"];
   tilsit [label="Tilsit"];
   suwalki_e [label=""];
   eckau_e [label=""];
 
+  riga -- mitau;
   prussia_n -- tilsit;
   prussia_n -- kaltinenai;
   kaltinenai -- nemaksciai;
   nemaksciai -- siaulai;
   kaltinenai -- siaulai;
-  siaulai -- mitau;
+  siaulai -- mitau -- eckau;
+  panevezys -- eckau -- eckau_e -- jakobstadt;
   siaulai -- panaevezys;
-  riga -- mitau;
-  mitau -- eckau;
   prussia_s -- tilsit;
   prussia_s -- kalvarija;
   suwalki -- kalvarija;
@@ -51,10 +53,8 @@ strict graph {
   vilkomir -- svencionys;
   vilkomir -- salakas;
   vilkomir -- panevezys;
-  panevezys -- eckau;
-  eckau -- eckau_e;
-  eckau_e -- jakobstadt;
   riga -- friedrichstadt -- jakobstadt;
   riga -- venden;
   venden -- livonia;
 }
+
