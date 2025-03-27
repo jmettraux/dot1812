@@ -4,6 +4,7 @@
 strict graph {
 
   rankdir="LR";
+  ordering="in";
 
   prussia_n [label="North Prussia"];
   prussia_s [label="South Prussia"];
