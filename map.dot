@@ -1,0 +1,32 @@
+
+// dot1812/map.dot
+
+strict graph {
+  prussia_n [label="North Prussia"];
+  prussia_s [label="South Prussia"];
+  tilsit [label="Tilsit"];
+  prussia_n -- tilsit;
+  prussia_n -- kaltinenai;
+  kaltinenai -- nemaksciai;
+  nemaksciai -- siaulai;
+  kaltinenai -- siaulai;
+  siaulai -- mitau;
+  siaulai -- panaevezys;
+  riga -- mitau;
+  mitau -- eckau;
+  prussia_s -- tilsit;
+  prussia_s -- kalvarija;
+  suwalki -- kalvarija;
+  suwalki -- szczuczy;
+  suwalki -- noname;
+  noname -- kalvarija;
+  warsaw_n -- szczuczy;
+  warsaw_n -- bialystok;
+  bialystok -- bielsk;
+  drohiczyn -- bielsk;
+  bialystok -- volkovysk;
+  mostyr -- volkovysk;
+  bialystok -- grodno;
+  suwalki -- grodno;
+  grodno -- mostyr;
+}
