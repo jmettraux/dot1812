@@ -2,9 +2,13 @@
 // dot1812/map.dot
 
 strict graph {
+
   prussia_n [label="North Prussia"];
   prussia_s [label="South Prussia"];
   tilsit [label="Tilsit"];
+  suwalki_e [label=""];
+  eckau_e [label=""];
+
   prussia_n -- tilsit;
   prussia_n -- kaltinenai;
   kaltinenai -- nemaksciai;
@@ -18,8 +22,8 @@ strict graph {
   prussia_s -- kalvarija;
   suwalki -- kalvarija;
   suwalki -- szczuczy;
-  suwalki -- noname;
-  noname -- kalvarija;
+  suwalki -- suwalki_e;
+  suwalki_e -- kalvarija;
   warsaw_n -- szczuczy;
   warsaw_n -- bialystok;
   bialystok -- bielsk;
@@ -29,4 +33,28 @@ strict graph {
   bialystok -- grodno;
   suwalki -- grodno;
   grodno -- mostyr;
+  mostyr -- lida;
+  lida -- novogrudok;
+  lida -- onuskis;
+  volkovysk -- novogrudok;
+  volkovysk -- slonim -- pruzhany;
+  kalvarija -- kovno;
+  kovno -- kedainai;
+  kovno -- onuskis;
+  kovno -- vilna;
+  vilna -- onuskis;
+  vilna -- lida;
+  vilna -- volozhin;
+  vilna -- molodechno;
+  vilna -- svencionys;
+  svencionys -- vidzy;
+  vilkomir -- svencionys;
+  vilkomir -- salakas;
+  vilkomir -- panevezys;
+  panevezys -- eckau;
+  eckau -- eckau_e;
+  eckau_e -- jakobstadt;
+  riga -- friedrichstadt -- jakobstadt;
+  riga -- venden;
+  venden -- livonia;
 }
