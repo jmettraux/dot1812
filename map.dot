@@ -12,7 +12,16 @@ strict graph {
   warsaw_n -- bialystok -- grodno -- mostyr -- lida -- novogrudok -- nesvich
     -- slutsk -- bobrusk;
   warsaw_s -- biala -- brest -- kabryn -- pruzhany -- slonim -- nesvich;
-  prussia_n -- tilsit -- kaltinenai -- siaulai -- mitau;
+
+  subgraph niemen_bridges {
+    node [
+      label="Niemen", shape=box, width=.8, height=.2,
+      color=grey, fillcolor=grey, style=filled];
+    n0; n1; n2;
+    //n0 -- n1 -- n2;
+  }
+
+  prussia_n -- n0 -- tilsit -- n1 -- kaltinenai -- siaulai -- mitau;
   prussia_s -- tilsit;
   vladimir_n -- moscow;
   tver -- klin -- moscow;
@@ -22,8 +31,8 @@ strict graph {
     -- smolensk;
   smolensk -- dorogobuzh -- vyazma -- yukhnov -- kaluga -- maloryaroslavet
     -- moscow;
-  prussia_s -- kalvarija -- kovno -- vilna -- molodechno -- minsk -- borisov
-    -- kokhanovo -- mogilev;
+  prussia_s -- kalvarija -- n2 -- kovno -- vilna -- molodechno -- minsk
+    -- borisov -- kokhanovo -- mogilev;
   kokhanovo -- orsha -- smolensk;
   //smolensk -- sverskovo -- roslavl -- bryansk -- karachev -- orel -- voronezh;
   riga -- livonia -- ostrov -- pskov -- bezhanitzy;
@@ -72,12 +81,20 @@ strict graph {
   // riga -- venden;
   // venden -- livonia;
 
-  riga [label="Riga"];
+  riga [label="Riga D", shape="pentagon"];
+  kaltinenai [label="Kaltinenai [d]"];
   prussia_n [label="North Prussia"];
-  prussia_s [label="South Prussia"];
-  tilsit [label="Tilsit"];
-  warsaw_n [label="North Grand Duchy of Warsaw"];
-  warsaw_s [label="South Grand Duchy of Warsaw"];
+  prussia_s [label="South Prussia D"];
+  tilsit [label="Tilsit [d]"];
+  warsaw_n [label="N Grand Duchy of Warsaw D"];
+  warsaw_s [label="S Grand Duchy of Warsaw D"];
+  brest [label="Brest [d]", shape="pentagon"];
+  kovno [label="Kovno [d]"];
+  lublin [label="Lublin [d]"];
+  austria [label="Austria D"];
+  mostyr [label="Mostyr", shape="pentagon"];
+  zamosc [label="Zamosc", shape="pentagon"];
+  lutsk [label="Lutsk [d]", shape="pentagon"];
   //suwalki_e [label=""];
   //eckau_e [label=""];
 }
