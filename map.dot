@@ -5,6 +5,10 @@ strict graph {
 
   rankdir="LR";
   ordering="in";
+  ranksep=0.05; // The rank separation, in inches. Default is 0.5.
+  nodesep=0.05; // The node separation, in inches. Default is 0.25.
+
+  node [shape=none];
 
   ostrog -- novograd -- zhitomir -- kiev -- ukraine;
   austria -- lublin -- zamosc -- vladimir -- lutsk -- dubno -- ostrog
@@ -16,9 +20,8 @@ strict graph {
   subgraph niemen_bridges {
     node [
       label="Niemen", shape=box, width=.8, height=.2,
-      color=grey, fillcolor=grey, style=filled];
+      color=lightblue, fillcolor=lightblue, fontcolor=white, style=filled];
     n0; n1; n2;
-    //n0 -- n1 -- n2;
   }
 
   prussia_n -- n0 -- tilsit -- n1 -- kaltinenai -- siaulai -- mitau;
@@ -81,20 +84,20 @@ strict graph {
   // riga -- venden;
   // venden -- livonia;
 
-  riga [label="Riga D", shape="pentagon"];
+  riga [label="Riga\nD", shape=pentagon];
   kaltinenai [label="Kaltinenai [d]"];
-  prussia_n [label="North Prussia"];
-  prussia_s [label="South Prussia D"];
+  prussia_n [label="Prussia", shape=oval];
+  prussia_s [label="Prussia\nD", shape=oval];
   tilsit [label="Tilsit [d]"];
-  warsaw_n [label="N Grand Duchy of Warsaw D"];
-  warsaw_s [label="S Grand Duchy of Warsaw D"];
-  brest [label="Brest [d]", shape="pentagon"];
+  warsaw_n [label="Grand Duchy\nof Warsaw\nD", shape=oval];
+  warsaw_s [label="Grand Duchy\nof Warsaw\nD", shape=oval];
+  brest [label="Brest [d]", shape=pentagon];
   kovno [label="Kovno [d]"];
   lublin [label="Lublin [d]"];
-  austria [label="Austria D"];
-  mostyr [label="Mostyr", shape="pentagon"];
-  zamosc [label="Zamosc", shape="pentagon"];
-  lutsk [label="Lutsk [d]", shape="pentagon"];
+  austria [label="Austria\nD", shape=oval];
+  mostyr [label="Mostyr", shape=pentagon];
+  zamosc [label="Zamosc", shape=pentagon];
+  lutsk [label="Lutsk\n[d]", shape=pentagon];
   //suwalki_e [label=""];
   //eckau_e [label=""];
 }
