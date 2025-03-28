@@ -10,15 +10,22 @@ strict graph {
   austria -- lublin -- zamosc -- vladimir -- lutsk -- dubno -- ostrog
     -- moldavia;
   warsaw_n -- bialystok -- grodno -- mostyr -- lida -- novogrudok -- nesvich
-    -- slutsk -- bobrusk;// -- mogilev;
+    -- slutsk -- bobrusk;
   warsaw_s -- biala -- brest -- kabryn -- pruzhany -- slonim -- nesvich;
   prussia_n -- tilsit -- kaltinenai -- siaulai -- mitau;
   prussia_s -- tilsit;
+  vladimir_n -- moscow;
+  tver -- klin -- moscow;
+  tver -- staritsa -- gzhatsk -- vyazma;
+  kaluga -- serpukhov -- tula -- ryazan;
   vilna -- svencionys -- vidzy -- drissa -- polotsk -- vitebsk -- poreczie
     -- smolensk;
+  smolensk -- dorogobuzh -- vyazma -- yukhnov -- kaluga -- maloryaroslavet
+    -- moscow;
   prussia_s -- kalvarija -- kovno -- vilna -- molodechno -- minsk -- borisov
     -- kokhanovo -- mogilev;
   kokhanovo -- orsha -- smolensk;
+  //smolensk -- sverskovo -- roslavl -- bryansk -- karachev -- orel -- voronezh;
   riga -- livonia -- ostrov -- pskov -- bezhanitzy;
   mitau -- riga;
   bobrusk -- mogilev;
