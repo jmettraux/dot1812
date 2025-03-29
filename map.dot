@@ -10,77 +10,93 @@ strict graph {
 
   node [shape=none];
 
-  ostrog -- novograd -- zhitomir -- kiev -- ukraine;
-  austria -- lublin -- zamosc -- vladimir -- lutsk -- dubno -- ostrog
-    -- moldavia;
-  warsaw_n -- bialystok -- grodno -- mostyr -- lida -- novogrudok -- nesvich
-    -- slutsk -- bobrusk;
-  warsaw_s -- biala -- brest -- kabryn -- pruzhany -- slonim -- nesvich;
-
-  subgraph dwina_bridges {
-    node [
-      label="Dwina", shape=box, width=.8, height=.2,
-      color=lightblue, fillcolor=lightblue, fontcolor=white, style=filled];
-    d0; d1; d3;
+  subgraph cluster_a2 {
+    prussia_n;
+    kaltinenai;
+    tilsit;
+  }
+  subgraph cluster_a3 {
+    prussia_s;
+    kalvarija;
+    suwalki;
+    kalvarija_s;
   }
 
   subgraph niemen_bridges {
     node [
       label="Niemen", shape=box, width=.8, height=.2,
       color=lightblue, fillcolor=lightblue, fontcolor=white, style=filled];
-    n0; n1; n2;
+    n0; //n1; n2;
   }
 
-  prussia_n -- n0 -- tilsit -- n1 -- kaltinenai -- siaulai -- mitau;
-  prussia_s -- tilsit;
-  vladimir_n -- moscow;
-  tver -- klin -- moscow;
-  tver -- staritsa -- gzhatsk -- vyazma;
-  kaluga -- serpukhov -- tula -- ryazan;
-  smolensk -- dorogobuzh -- vyazma -- yukhnov -- kaluga -- maloryaroslavet
-    -- moscow;
-  prussia_s -- kalvarija -- n2 -- kovno -- vilna -- molodechno -- minsk
-    -- borisov -- kokhanovo -- mogilev;
+  subgraph prussia_highways {
+    prussia_n -- n0 -- tilsit;
+    prussia_s -- tilsit -- kaltinenai;
+    prussia_s -- kalvarija -- suwalki;
+  }
 
-  riga -- d1 -- friedrischstadt -- jakobstadt -- duenaburg -- ludzha -- ostrov;
-  riga -- d0 -- venden -- livonia;
-  mitau -- d3 -- riga;
+  //ostrog -- novograd -- zhitomir -- kiev -- ukraine;
+  //austria -- lublin -- zamosc -- vladimir -- lutsk -- dubno -- ostrog
+  //  -- moldavia;
+  //warsaw_n -- bialystok -- grodno -- mostyr -- lida -- novogrudok -- nesvich
+  //  -- slutsk -- bobrusk;
+  //warsaw_s -- biala -- brest -- kabryn -- pruzhany -- slonim -- nesvich;
+
+  //subgraph dwina_bridges {
+  //  node [
+  //    label="Dwina", shape=box, width=.8, height=.2,
+  //    color=lightblue, fillcolor=lightblue, fontcolor=white, style=filled];
+  //  d0; d1; d3;
+  //}
+
+  //prussia_n -- n0 -- tilsit -- n1 -- kaltinenai -- siaulai -- mitau;
+  //prussia_s -- tilsit;
+  //vladimir_n -- moscow;
+  //tver -- klin -- moscow;
+  //tver -- staritsa -- gzhatsk -- vyazma;
+  //kaluga -- serpukhov -- tula -- ryazan;
+  //smolensk -- dorogobuzh -- vyazma -- yukhnov -- kaluga -- maloryaroslavet
+  //  -- moscow;
+  //prussia_s -- kalvarija -- n2 -- kovno -- vilna -- molodechno -- minsk
+  //  -- borisov -- kokhanovo -- mogilev;
+
+  //riga -- d1 -- friedrischstadt -- jakobstadt -- duenaburg -- ludzha -- ostrov;
+  //riga -- d0 -- venden -- livonia;
+  //mitau -- d3 -- riga;
 
   //vilna -- svencionys -- vidzy -- drissa -- polotsk -- vitebsk -- poreczie
   //  -- smolensk;
   //kokhanovo -- orsha -- smolensk;
   //smolensk -- sverskovo -- roslavl -- bryansk -- karachev -- orel -- voronezh;
 
-  ostrov -- pskov -- bezhanitzy;
-  bobrusk -- mogilev;
+  //ostrov -- pskov -- bezhanitzy;
+  //bobrusk -- mogilev;
 
-  subgraph tracks {
-    edge [style=dashed];
-    livonia -- ostrov;
-    livonia -- livonia_e -- ostrov;
-  }
+  //subgraph tracks {
+  //  edge [style=dashed];
+  //  livonia -- ostrov;
+  //  livonia -- livonia_e -- ostrov;
+  //}
 
-  riga [label="Riga\nD", shape=pentagon, peripheries=2];
-  kaltinenai [label="Kaltinenai [d]"];
   prussia_n [label="Prussia n", shape=oval, peripheries=2];
   prussia_s [label="Prussia s\nD", shape=oval, peripheries=2];
-  tilsit [label="Tilsit [d]"];
-  warsaw_n [label="Warsaw n\nD", shape=oval, peripheries=2];
-  warsaw_s [label="Warsaw s\nD", shape=oval, peripheries=2];
-  brest [label="Brest [d]", shape=pentagon];
-  kovno [label="Kovno [d]"];
-  lublin [label="Lublin [d]"];
-  austria [label="Austria\nD", shape=oval, peripheries=2];
-  mostyr [label="Mostyr", shape=pentagon];
-  zamosc [label="Zamosc", shape=pentagon];
-  lutsk [label="Lutsk\n[d]", shape=pentagon];
-  livonia [label="Livonia\nD", shape=oval, peripheries=2];
-  ostrov [label="Ostrov [d]", shape=oval, peripheries=2];
-  pskov [label="Pskov\nD", shape=oval, peripheries=2];
-  bezhanitzy [label="Bezhanitzy\n1", shape=oval, peripheries=2];
-  livonia_e [label="o"];
-  vilna [label="Vilna 2\n[d]", shape=oval, peripheries=2];
-  //suwalki_e [label=""];
-  //eckau_e [label=""];
+  //riga [label="Riga\nD", shape=pentagon, peripheries=2];
+  //kaltinenai [label="Kaltinenai [d]"];
+  //tilsit [label="Tilsit [d]"];
+  //warsaw_n [label="Warsaw n\nD", shape=oval, peripheries=2];
+  //warsaw_s [label="Warsaw s\nD", shape=oval, peripheries=2];
+  //brest [label="Brest [d]", shape=pentagon];
+  //kovno [label="Kovno [d]"];
+  //lublin [label="Lublin [d]"];
+  //austria [label="Austria\nD", shape=oval, peripheries=2];
+  //mostyr [label="Mostyr", shape=pentagon];
+  //zamosc [label="Zamosc", shape=pentagon];
+  //lutsk [label="Lutsk\n[d]", shape=pentagon];
+  //livonia [label="Livonia\nD", shape=oval, peripheries=2];
+  //ostrov [label="Ostrov [d]", shape=oval, peripheries=2];
+  //pskov [label="Pskov\nD", shape=oval, peripheries=2];
+  //bezhanitzy [label="Bezhanitzy\n1", shape=oval, peripheries=2];
+  //livonia_e [label="o"];
+  //vilna [label="Vilna 2\n[d]", shape=oval, peripheries=2];
 }
 
